@@ -1,6 +1,9 @@
 user:
 	useradd -m minecraft
 
+systemd:
+	systemctl minecraft enable
+
 install:
 	cp start.sh stop.sh /home/minecraft
 	chown minecraft:minecraft /home/minecraft/start.sh
@@ -15,4 +18,4 @@ papermc:
 	echo "eula=true" > /home/minecraft/eula.txt
 	chown minecraft:minecraft /home/minecraft/eula.txt
 
-all: user papermc install
+all: user papermc install systemd
