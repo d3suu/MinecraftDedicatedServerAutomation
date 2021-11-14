@@ -33,6 +33,7 @@ wget -O /home/minecraft/paper-1.17.1-381.jar https://papermc.io/api/v2/projects/
 chown minecraft:minecraft /home/minecraft/paper-1.17.1-381.jar
 echo "eula=true" > /home/minecraft/eula.txt
 chown minecraft:minecraft /home/minecraft/eula.txt
+systemctl minecraft enable
 ```
 
 ## Managing service
